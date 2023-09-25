@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+    <div style="margin-left:40%;margin-top: 3%;">
+    <div style="font-weight: bolder;font-size: large;">JavaScript program to calculate multiplication and division of 
+        two numbers (input from user).
+    </div>
+    <table border="1"  style="border-collapse: collapse;margin-top: 50px;width: 40%;">
+    <tr>
+    <td style="padding: 2%;">
+    <label> 1st Number :</label>
+    <input type="text" id="i1" placeholder="Enter 1st number :"/><br>
+    <label> 2nd Number :</label>
+    <input type="text" id="i2" placeholder="Enter 2nd number :" />
+    <br><br>
+
+    <button  onclick="multiply()" >Multiply</button>   <button  onclick="divide()">Divide</button>
+    <p id="i3">The Result Is:</p>
+    <script>
+        
+        function multiply(){
+            var i1=document.getElementById("i1").value;
+            a = Number.parseInt(i1);
+            var i2=document.getElementById("i2").value;
+            b = Number.parseInt(i2);
+            var product=a*b;
+            document.getElementById("i3").innerHTML="The Result is:"+product;
+        }
+       
+        function divide(){
+            var i1=document.getElementById("i1").value;
+            a = Number.parseInt(i1);
+            var i2=document.getElementById("i2").value;
+            b = Number.parseInt(i2);
+            var division=a/b;
+            document.getElementById("i3").innerHTML="The Result is:"+division;
+        }
+    </script>
+    </td>
+    </tr>
+    </table>
+</div>
+</body>
+</html>

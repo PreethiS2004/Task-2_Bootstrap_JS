@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .c{
+            background: linear-gradient(to right, rgb(245, 224, 237),rgb(239, 212, 166),rgb(245, 224, 237));
+
+        }
+        .d{
+            background: linear-gradient(to right, rgb(222, 158, 197),rgb(244, 165, 236),rgb(220, 139, 189));
+        }
+        .d1{
+            background: linear-gradient(to right, rgb(236, 226, 232),rgb(239, 212, 166),rgb(229, 215, 224));
+
+        }
+        .c1{
+            text-align: center;
+        }
+        #i10{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <form>
+        <table  style="border-collapse: collapse;" width="60%">
+            
+            <tr class="c">
+               <td colspan="2"><h1 style="color:blue;text-align: center;" >Registration form</h1></td> 
+
+            </tr>
+            <tr class="c">
+                <th width="200">First Name</th>
+                <td ><input id="i1"type="text" size="50" required/><span id="msg1"></span></td>
+            </tr>
+            <tr class="c">
+                <th>Last Name</th>
+                <td><input id="i2" type="text" size="50"required/><span id="msg2"></span></td>
+            </tr>
+            <tr class="c">
+                <th>Email</th>
+                <td><input id="i3" type="email" size="50"required/><span id="msg3"></span></td>
+            </tr>
+            <tr class="c">
+                <th>Password</th>
+                <td><input id="i4" type="password" size="50" required/><span id="msg4"></span></td>
+            </tr>
+            <tr class="c">
+                <th>Re-enter Password</th>
+                <td><input id="i5" type="password"size="50" required/><span id="msg5"></span></td>
+            </tr>
+            <tr class="d1">
+                <th rowspan="2">Gender:</th>
+                <td><input type="radio" value="Male">Male</td>
+            </tr>
+            <tr class="d1">
+                <td><input type="radio" value="Female">Female</td>
+            </tr>
+            <tr class="d">
+                <th>Age:</th>
+                <td><input id="i6" type="text" size="50" required/><span id="msg6"></span></td>
+            </tr>
+            <tr class="d">
+                <th>Phone Number</th>
+                <td><input id="i7" type="tel" size="50" required/><span id="msg7"></span></td>
+            </tr>
+            <tr class="d">
+                <th>Address</th>
+                 <td>
+                    <textarea id="i8" rows="5" cols="43"></textarea><span id="msg8"></span>
+                </td>
+            </tr>
+            <tr class="d">
+                <th>State</th>
+                <td><input id="i9" type="text" size="50" required/><span id="msg9"></span></td>
+            </tr>  
+            <tr class="d">
+                <th>Country</th>
+                <td><select>
+                    <option>Choose your country</option>
+                    <option>India</option>
+                    <option>America</option>
+                    <option>China</option>
+                    <option>Africa</option>
+                </select></td>
+            </tr>
+            <tr class="d">
+                <th>Languages known</th>
+                <td><input type="checkbox">English
+                    <input type="checkbox">Kannada
+                    <input type="checkbox">Hindi
+                    <input type="checkbox">Telugu
+                </td>
+            </tr>
+            <tr class="d">
+                <td colspan="2"><input type="checkbox"  required/><label>Hereby I declare all the given details are true </label></td>
+            </tr>
+            <tr class="d">
+                <td id="i10" colspan="2">Login to<a href="https://Ethnus.com"> Ethnus </a>website</td>
+                
+            </tr>
+            <tr class="d">
+                <td colspan="2"><p class="c1"><button onclick="checkStrength()" type="submit" style="width: 18%;border-radius: 10px;background-color: red;"><a href="#" style="color: white;">REGISTER</a></button></p></td>
+            </tr>
+        </table><br/>
+        
+    </form>
+    <script>
+        
+            var fn = document.getElementById("i1").value;
+            var ln = document.getElementById("i2").value;
+            var email = document.getElementById("i3").value;
+            var pw = document.getElementById("i4").value;
+            var rpw=document.getElementById("i5").value;
+            var age = document.getElementById("i6").value;
+            var pn = document.getElementById("i7").value;
+            var add = document.getElementById("i8").value;
+            var state = document.getElementById("i9").value;
+        function checkStrength(){
+            if(fn.length==0 || fn.length<5)
+            {
+                document.getElementById("msg1").innerText=" POOR";
+                document.getElementById("msg1").style.color = "red"; 
+            }
+        
+            if(ln.length==0)
+            {
+                document.getElementById("msg2").innerText=" POOR";
+                document.getElementById("msg2").style.color = "red"; 
+            }
+            if(email.length==0)
+            {
+                document.getElementById("msg3").innerText="POOR";
+                document.getElementById("msg3").style.color = "red";
+                
+            }
+            if(pw.length==0)
+            {
+                document.getElementById("msg4").innerText="POOR";
+                document.getElementById("msg4").style.color = "red";
+            } 
+            if(rpw.length==0)
+            {
+                document.getElementById("msg5").innerText="POOR OR MISMATCH";
+                document.getElementById("msg5").style.color = "red";
+               
+            }
+            if(age.length==0)
+            {
+                document.getElementById("msg6").innerText=" POOR";
+                document.getElementById("msg6").style.color = "red"; 
+            }
+            if(pn.length==0)
+            {
+                document.getElementById("msg7").innerText=" POOR";
+                document.getElementById("msg7").style.color = "red"; 
+            }
+            if(add.length==0)
+            {
+                document.getElementById("msg8").innerText=" POOR";
+                document.getElementById("msg8").style.color = "red"; 
+            }
+            if(state.length==0)
+            {
+                document.getElementById("msg9").innerText=" POOR";
+                document.getElementById("msg9").style.color = "red"; 
+            }
+        }
+    
+    </script>
+</center>
+</body>
+</html>
