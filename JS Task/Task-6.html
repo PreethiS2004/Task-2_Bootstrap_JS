@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+
+
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    }
+    
+    button {
+
+    width: 100%;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: bold;
+    }
+
+</style>
+</head>
+<body>
+<center>
+    <div class="container" >
+        <form class="well form-horizontal" action=" " method="post" style="width: 38%;height: 350px;" >
+
+        <div style="font-family:Book Antiqua ;font-style: italic;font-size:38px;text-align: center;">Instagram </div><br>
+        <div class="form-group">
+            <label class="control-label"></label>
+            <div class="col-md-7 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input name="first_name" style="width: 200%;" id="un" placeholder="User Name" class="form-control " type="text">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label"></label>
+            <div class="col-md-7 inputGroupContainer">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input name="password" style="width: 200%;" id="pw" placeholder="Password" class="form-control" type="password">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class=" control-label"></label>
+            <div class="col-md-12">
+                <button type="submit" onclick="login()" class="btn text-light" style="background-color: #3662f0;height: 45px;">Log in <span
+                        class="glyphicon glyphicon-submit"></span></button>
+            </div>
+        </div>
+        <br>
+        <input class="form-check-input me-2" type="checkbox" style="float:left">
+        <label class="form-check-label" style="font-weight:500;float:left">Remember me</label>
+        
+        <a href="#" style="float: right;color: #33a7e9;">Forgot Password?</a>
+    </form>
+    <h5 style="white-space: pre;">Don't have account! <a href="#" style="color: #33a7e9;">Sign Up here. </a></h5>
+    </div>
+
+</body>
+</html>
+
+    <script>
+        function login() {
+        const username = document.getElementById("un").value;
+        const password = document.getElementById("pw").value;
+
+   
+    if (username === "User Name" && password === "Password") {
+        alert("Login successful!");
+    } else {
+        alert("Login failed. Please check your credentials.");
+    }
+    }
+
+    </script>
+</body>
+</html>
